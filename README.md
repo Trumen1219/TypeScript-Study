@@ -54,7 +54,7 @@ TypeScript中的基本类型：
 	* 语法：
 
 ```typescript
-§ let变量: 类型;
+let变量: 类型;
 let变量: 类型=值;
 functionfn(参数: 类型,参数: 类型): 类型{
 ...
