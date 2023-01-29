@@ -1,6 +1,5 @@
 # TypeScript基础!
-
-	1. typeScript 是什么
+	*typeScript 是什么
 	typescript是JavaScript的超集（js有的TS都有）
 	ts在js的基础上增加了类型支持
 	2. typeScript 的优势
