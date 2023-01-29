@@ -1,6 +1,5 @@
 # TypeScript-Study
-This is my TypeScript study record！
-
+This is my TypeScript study record！🥳
 ## 学习视频
 [TypeScript教程（李立超老师TS新课）](https://www.bilibili.com/video/BV1Xy4y1v7S2/)
 
@@ -8,7 +7,7 @@ This is my TypeScript study record！
 
 学习内容  | 更新时间  | 备注
  ---- | ----- | ------ 
-TypeScript中的基本类型 |	2023-1-28	
+[TypeScript中的基本类型](#) |	2023-1-28	
 编译选项	| 2023-1-28	
 TypeScript打包	| 2023-1-29	Webpack整合
 Babel整合 | 2023-1-29
