@@ -1,10 +1,10 @@
 # TypeScript基础!
 
-** 一.typeScript 是什么**  
+ 一.typeScript 是什么  
 
 	typescript是JavaScript的超集（js有的TS都有）；ts在js的基础上增加了类型支持
 	
-* 二.typeScript 的优势
+二.typeScript 的优势
 
 	* ts是**静态类型**的编程语言，js是**动态类型**的编程语言
 	
@@ -15,7 +15,7 @@
 	* TS提高了代码的**可维护性**
 	* TS支持最新的ECMAScript语法
 	* TS类型推断机制，不需要在代码每个地方都标注类型
-* 三.typeScript 安装
+ 三.typeScript 安装
 	安装：`npm i -g typescript`
 	版本检查：`tsc -v`
 	运行--->生成js文件
