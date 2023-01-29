@@ -79,7 +79,7 @@ string | 'hi', "hi", hi | 任意字符串
 boolean | true、false | 布尔值true或false
 字面量 | 其本身 | 限制变量的值就是该字面量的值
 any | | 任意类型
-unknown | 类型安全的any
+unknown |  | 类型安全的any
 void | 空值（undefined | 没有值（或undefined）
 never | 没有值 | 不能是任何值
 object | {name:'孙悟空'} | 任意的JS对象
@@ -88,69 +88,160 @@ tuple | [4,5] | 元素，TS新增类型，固定长度数组
 enum | enum{A, B} | 枚举，TS中新增类型
 
 * number
+```typeScript
+let decimal: number = 6;  
+let hex: number = 0xf00d;  
+let big: bigint = 100n;
+```
 
-` let decimal: number = 6;
-let hex: number = 0xf00d;
-let binary: number = 0b1010;
-let octal: number = 0o744;
-let big: bigint = 100n;`
-boolean
-			○ letisDone: boolean=false;
-		• string
-			○ letcolor: string="blue";color='red';letfullName: string=`Bob Bobbington`;letage: number=37;letsentence: string=`Hello, my name is ${fullName}.I'll be ${age+1}years old next month.`;
-		• 字面量
-			○ 也可以使用字面量去指定变量的类型，通过字面量可以确定变量的取值范围
-			○ letcolor: 'red'|'blue'|'black';letnum: 1|2|3|4|5;
-		• any
-			○ 类型是any的变量可以赋值给任意变量
-			○ 
+*boolean
+```typeScript
+letisDone: boolean=false;
+```
+
+* string
+```typeScript
+let color: string = "blue";
+color = 'red';
+let fullName: string = `Bob Bobbington`;
+let sentence: string = `Hello, my name is ${fullName};
+```
+* 字面量
+	* 也可以使用字面量去指定变量的类型，通过字面量可以确定变量的取值范围
+	* ```typeScript  letcolor: 'red'|'blue'|'black';letnum: 1|2|3|4|5;```
+
+* any
+	类型是any的变量可以赋值给任意变量
+```typeScript
+let d: any=4;d='hello';d=true;
+```
+* unknown
+	let notSure: unknown=4;notSure='hello';
+	* 实际上就是一个类型安全的any，unknown类型的变量，不能直接赋值给其他变量
+	* 可以通过
+	（1）
+		```typeScript
+		if(typeof e === 'string'){
+			s = e;
+		}
+	（2）类型断言（用来告诉解析器变量的实际类型）
 			
-			○ letd: any=4;d='hello';d=true;
-		• unknown
-			○ 
-			可以通过
-			（1）
-			
-			（2）
-			
-			○ let notSure: unknown=4;notSure='hello';
-		• void
-			○ 
-			函数内部可return null undefined
-			○ letunusable: void=undefined;
-		• never
-			○ 
-			○ functionerror(message: string): never{thrownewError(message);}
-		• object（没啥用）
-			○ 
-			
-			○ 
-			○ letobj: object={};
-		• array
-			○ 
-			○ letlist: number[]=[1,2,3];letlist: Array<number>=[1,2,3];
-		• tuple
-			○ 
-			○ letx: [string,number];x=["hello",10];
-		• enum
-			○ 
-			○ enumColor{Red,Green,Blue,}letc: Color=Color.Green;enumColor{Red=1,Green,Blue,}letc: Color=Color.Green;enumColor{Red=1,Green=2,Blue=4,}letc: Color=Color.Green;
-			
-		• & ｜ 对象同时有xx属性
-		
-			
-		• 
+* void
 	
+	用来表示空，以函数为例就表示没有返回值的函数，函数内部可return null / undefined
+```typeScript
+let unusable: void=undefined;
+```
+* never
+	表示永远不会返回结果
+```typeScript
+	function error(message: string): never {
+  throw new Error(message);
+}
+```
+
+* object
+	object表示一个js对象
+
+```typeScript
+let obj: object={};
+```
+
+	{}用来指定对象中可以包含哪些属性
 	
-		• 
-		根据返回值的类型判断类型
-		• 类型断言
-			○ 有些情况下，变量的类型对于我们来说是很明确，但是TS编译器却并不清楚，此时，可以通过类型断言来告诉编译器变量的类型，断言有两种形式：
-				 第一种
-					let someValue: unknown = "this is a string";
-					let strLength: number = (someValue as string).length;
+	语法：{属性名：属性值，属性名：属性值} 在属性名后面加上？表示属性是可选的
+	
+```typeScript
+let b {name: string, age?:number};
+b = {name:'张三',age:18};
+```
+
+	[propName:string]:any 表示任意类型的属性
+
+```typeScript
+let c : {name:string,[propName:string]:any};
+c = {name:'李四',age: 18, gender: '女'}
+```
+
+* 函数结构的类型声明
+
+	语法：（形参：类型，形参：类型...）=>返回值
+	
+```typeScript
+let d :(a:number ,b:number)=>number;
+```
+
+* array
+	数组的类型声明：
+	
+	类型[]
+	
+	Array<类型>
+	
+```typeScript
+let list: number[] = [1, 2, 3];
+let list: Array<number> = [1, 2, 3];
+```
+* tuple
+	元组，元组就是固定长度的数组
+	
+	语法：[类型，类型，类型]
+
+```typeScript
+let x: [string, number];
+x = ["hello", 10]; 
+```
+* enum
+
+```typeScript
+enum Color {
+  Red,
+  Green,
+  Blue,
+}
+let c: Color = Color.Green;
+
+enum Color {
+  Red = 1,
+  Green,
+  Blue,
+}
+let c: Color = Color.Green;
+
+enum Color {
+  Red = 1,
+  Green = 2,
+  Blue = 4,
+}
+let c: Color = Color.Green;
+```
+* 对象同时有xx属性【&表示同时】
+
+```typeScript
+let j :{name:string} & {age:nember} 
+```
+
+* 类型的别名
+
+```typeScript
+type myType = 1 | 2 | 3 | 4 | 5;
+let k: 	myType
+k = 2;
+```
+
+* 类型断言
+	有些情况下，变量的类型对于我们来说是很明确，但是TS编译器却并不清楚，此时，可以通过类型断言来告诉编译器变量的类型，断言有两种形式：
+	
+	* 第一种
+
+```typeScript
+let someValue: unknown = "this is a string";
+let strLength: number = (someValue as string).length;
+```
 					
-				 第二种
-					let someValue: unknown = "this is a string";
-					let strLength: number = (<string>someValue).length;
-![image](https://user-images.githubusercontent.com/117837871/215303480-d2287052-7575-44ac-b7cc-99bd4b6f0dba.png)
+	* 第二种
+
+```typeScript
+let someValue: unknown = "this is a string";
+let strLength: number = (<string>someValue).length;
+```
