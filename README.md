@@ -1,9 +1,13 @@
 # TypeScript基础!
 
-* 一.typeScript 是什么  
+** 一.typeScript 是什么**  
+
 	typescript是JavaScript的超集（js有的TS都有）；ts在js的基础上增加了类型支持
+	
 * 二.typeScript 的优势
+
 	* ts是**静态类型**的编程语言，js是**动态类型**的编程语言
+	
 	*静态类型：编译期做类型检查   动态类型：执行期做类型检查*
 	* js在代码**执行**的时候的才能发现错误，而ts在**编译**的时候就可以发现
 	* js的绝大部分错误都是**类型错误**，用TS可以减少找BUG和改BUG的时间
@@ -101,11 +105,11 @@
 		根据返回值的类型判断类型
 		• 类型断言
 			○ 有些情况下，变量的类型对于我们来说是很明确，但是TS编译器却并不清楚，此时，可以通过类型断言来告诉编译器变量的类型，断言有两种形式：
-				§ 第一种
+				 第一种
 					let someValue: unknown = "this is a string";
 					let strLength: number = (someValue as string).length;
 					
-				§ 第二种
+				 第二种
 					let someValue: unknown = "this is a string";
 					let strLength: number = (<string>someValue).length;
 ![image](https://user-images.githubusercontent.com/117837871/215303480-d2287052-7575-44ac-b7cc-99bd4b6f0dba.png)
