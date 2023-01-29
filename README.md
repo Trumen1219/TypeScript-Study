@@ -33,7 +33,7 @@
 
 四.TypeScript中的基本类型
 
-	TypeScript中的基本类型：
+TypeScript中的基本类型：
 * 类型声明
 		
 *	类型声明是TS非常重要的一个特点；
