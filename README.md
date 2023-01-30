@@ -79,7 +79,7 @@
   编译选项是配置文件中非常重要也比较复杂的配置选项
   在compilerOptions中包含多个子选项，用来完成对编译的配置
   
-    * 项目选项：
+* 项目选项：
 
   target:设置ts代码编译的目标版本
 
@@ -97,7 +97,7 @@ ES3（默认）、ES5、ES6/ES2015、ES7/ES2016、ES2017、ES2018、ES2019、ES2
 
 如上设置，我们所编写的ts代码将会被编译为ES6版本的js代码
 
-    * lib
+* lib
 
   指定代码运行时所包含的库（宿主环境）
 
@@ -115,7 +115,7 @@ ES5、ES6/ES2015、ES7/ES2016、ES2017、ES2018、ES2019、ES2020、ESNext、DOM
     "outFile": "dist/aa.js"
 }
 ```
-    * module
+* module
 
   设置编译后代码使用的模块化系统
 
@@ -130,7 +130,7 @@ CommonJS、UMD、AMD、System、ES2020、ESNext、None
 }
 ```
 
-    * outDir
+* outDir
 
   编译后文件的所在目录
 
@@ -145,7 +145,7 @@ CommonJS、UMD、AMD、System、ES2020、ESNext、None
 ```
 设置后编译后的js文件将会生成到dist目录
 
-    * outFile
+* outFile
 
   将所有的文件编译为一个js文件
 
@@ -158,7 +158,7 @@ CommonJS、UMD、AMD、System、ES2020、ESNext、None
     "outFile": "dist/app.js"
 }
 ```
-    * rootDir
+* rootDir
 
   指定代码的根目录，默认情况下编译后文件的目录结构会以最长的公共目录为根目录，通过rootDir可以手动指定根目录
 
@@ -169,11 +169,11 @@ CommonJS、UMD、AMD、System、ES2020、ESNext、None
     "rootDir": "./src"
 }
 ```
-    * allowJs
+* allowJs
 
   是否对js文件编译
   
-    * checkJs
+* checkJs
 
   是否对js文件进行检查
 
@@ -185,22 +185,22 @@ CommonJS、UMD、AMD、System、ES2020、ESNext、None
     "checkJs": true
 }
 ```
-    * removeComments
+* removeComments
 
   是否删除注释
   默认值：false
   
-    * noEmit
+* noEmit
 
   不对代码进行编译
   默认值：false
 
-    * sourceMap
+* sourceMap
 
  是否生成sourceMap
  默认值：false
  
-  * 严格检查
+* 严格检查
 
     * strict
 启用所有的严格检查，默认值为true，设置后相当于开启了所有的严格检查
@@ -226,7 +226,7 @@ CommonJS、UMD、AMD、System、ES2020、ESNext、None
     * strictPropertyInitialization
 严格检查属性是否初始化
 
-  * 额外检查
+* 额外检查
 
     * noFallthroughCasesInSwitch
 检查switch语句包含正确的break
@@ -240,7 +240,7 @@ CommonJS、UMD、AMD、System、ES2020、ESNext、None
     * noUnusedParameters
 检查未使用的参数
 
-  * 高级
+* 高级
 
     * allowUnreachableCode
   检查不可达代码
