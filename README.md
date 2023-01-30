@@ -96,6 +96,26 @@ module.exports = {
    ]
 }
 ```
+
+* html-webpack-plugin：webpack中html插件，用来自动创建html文件
+  * 安装 「npm」html-webpack-plugin
+  * 在webpack.config.json中引入  const xxx = require('html-webpack-plugin')
+  * module.exports中配置webpack插件 
+
+
+* webpack-dev-server：webpack的开发服务器
+  * 实时更新
+<img width="760" alt="image" src="https://user-images.githubusercontent.com/117837871/215415260-97b1e423-c284-4342-8f32-4ac77df5e175.png">
+
+<img width="269" alt="image" src="https://user-images.githubusercontent.com/117837871/215415287-f5474538-4127-4797-976f-01a883c8b75a.png">
+
+* clean-webpack-plugin：webpack中的清除插件，每次构建都会先清除目录
+  * 安装 「npm」clean-webpack-plugin
+  * 在webpack.config.json中引入  const xxx = require('clean-webpack-plugin')
+  * module.exports中配置webpack插件 
+![image](https://user-images.githubusercontent.com/117837871/215415200-b431efa4-9718-4b43-838d-91d88841515a.png)
+
+
 ## 配置TS编译选项
 
   根目录下创建**tsconfig.json**，配置可以根据自己需要
