@@ -113,7 +113,7 @@ module.exports = {
   * 安装 「npm」clean-webpack-plugin
   * 在webpack.config.json中引入  const xxx = require('clean-webpack-plugin')
   * module.exports中配置webpack插件 
-![image](https://user-images.githubusercontent.com/117837871/215415200-b431efa4-9718-4b43-838d-91d88841515a.png)
+<img width="285" alt="image" src="https://user-images.githubusercontent.com/117837871/215415950-603800b1-b0dd-4d08-a366-40d70df8ba5d.png">
 
 
 ## 配置TS编译选项
