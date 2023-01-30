@@ -129,7 +129,7 @@ let d: any=4;d='hello';d=true;
 			
 * void
 	
-	用来表示空，以函数为例就表示没有返回值的函数，函数内部可return null / undefined
+	用来表示空，以函数为例就表示没有返回值的函数，函数内部可return undefined
 ```typeScript
 let unusable: void=undefined;
 ```
