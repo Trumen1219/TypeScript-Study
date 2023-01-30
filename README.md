@@ -30,7 +30,7 @@
   
 上述示例中，所有src目录和tests目录下的文件都会被编译
 
-**exclude**
+## exclude
   定义需要排除在外的目录
   默认值：["node_modules", "bower_components", "jspm_packages"]
   
@@ -42,7 +42,7 @@
 
 上述示例中，src下hello目录下的文件都不会被编译
 
-**extends**
+## extends
   定义被继承的配置文件
 
 示例：
@@ -53,7 +53,7 @@
 
 上述示例中，当前配置文件中会自动包含config目录下base.json中的所有配置信息
 
-**files**
+## files
   指定被编译文件的列表，只有需要编译的文件少时才会用到
   
 示例：
@@ -74,7 +74,7 @@
 
 列表中的文件都会被TS编译器所编译
 
-**compilerOptions**
+## compilerOptions
 
   编译选项是配置文件中非常重要也比较复杂的配置选项
   在compilerOptions中包含多个子选项，用来完成对编译的配置
