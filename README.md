@@ -230,6 +230,7 @@ k = 2;
 ```
 
 * 类型断言
+
 	有些情况下，变量的类型对于我们来说是很明确，但是TS编译器却并不清楚，此时，可以通过类型断言来告诉编译器变量的类型，断言有两种形式：
 
 	* 第一种
@@ -238,7 +239,6 @@ k = 2;
 let someValue: unknown = "this is a string";
 let strLength: number = (someValue as string).length;
 ```
-		
 	* 第二种
 
 ```typeScript
