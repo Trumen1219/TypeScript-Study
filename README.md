@@ -1,16 +1,40 @@
-# TypeScript-Study
-This is my TypeScript study record！🥳
-## 学习视频
-[TypeScript教程（李立超老师TS新课）](https://www.bilibili.com/video/BV1Xy4y1v7S2/)
+# 接口（Interface）
 
-## 学习进度
 
-学习内容  | 更新时间 | 备注
------ | ---- | ---
-[TypeScript中的基本类型](https://github.com/xwAccount/TypeScript-Study/tree/1-BasicType) |	2023-1-28	
-[编译选项](https://github.com/xwAccount/TypeScript-Study/tree/2-compileOption)	| 2023-1-28	
-TypeScript打包 | 2020-12-21 | Webpack整合 Babel整合
-面向对象 | 2020-12-21 | class、构造器、继承 supuer、抽象类、封装
-接口	|2023-1-30	| 
-泛型	| 2023-1-30	| 
-贪吃蛇练习	| 2023-1-30 | 
+  接口的作用类似于抽象类，不同点在于：接口中的所有方法和属性都是**没有实值**的，换句话说接口中的所有方法都是抽象方法；
+  
+  接口主要负责定义一个类的结构，接口可以去**限制一个对象的接口**：对象只有包含接口中定义的所有属性和方法时才能匹配接口；
+
+  同时，可以让一个类去实现接口，实现接口时类中要保护接口中的所有属性；
+
+示例（检查对象类型）：
+```typeScript
+interface Person{
+    name: string;
+    sayHello():void;
+}
+
+function fn(per: Person){
+    per.sayHello();
+}
+
+fn({name:'孙悟空', sayHello() {console.log(`Hello, 我是 ${this.name}`)}});
+```
+
+示例（实现）：
+
+```typeScript
+interface Person{
+   name: string;
+   sayHello():void;
+}
+
+class Student implements Person{
+   constructor(public name: string) {
+   }
+
+   sayHello() {
+       console.log('大家好，我是'+this.name);
+   }
+}
+```
