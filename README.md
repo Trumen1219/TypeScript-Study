@@ -238,7 +238,7 @@ k = 2;
 let someValue: unknown = "this is a string";
 let strLength: number = (someValue as string).length;
 ```
-					
+			
 	* 第二种
 
 ```typeScript
