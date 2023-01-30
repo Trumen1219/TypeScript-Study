@@ -33,6 +33,7 @@
 	版本检查：`tsc -v`
 	
 	运行--->生成js文件
+	tsc xxx.ts
 	
 *typescript包：将TS转化为JS，因为node/浏览器都是只识别JS的*
 
