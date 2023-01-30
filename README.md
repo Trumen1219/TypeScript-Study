@@ -9,10 +9,10 @@ This is my TypeScript study record！🥳
  ---- | ----- | ------ 
 [TypeScript中的基本类型](https://github.com/xwAccount/TypeScript-Study/tree/1-BasicType) |	2023-1-28	
 [编译选项](https://github.com/xwAccount/TypeScript-Study/tree/2-compileOption)	| 2023-1-28	
-TypeScript打包	| 2023-1-29	Webpack整合
+TypeScript打包	| 2023-1-29	| Webpack整合
 Babel整合 | 2023-1-29
-面向对象 |	2020-12-21	class、构造器、继承 | 1-30
+面向对象 |	2023-1-30	 | class、构造器、继承
 supuer、抽象类、封装 |1-30
-接口	|2020-12-21	| 1-30
-泛型	| 2020-12-21	| 1-30
-贪吃蛇练习	| 2020-12-22 | 1-30
+接口	|2023-1-30	| 
+泛型	| 2023-1-30	| 
+贪吃蛇练习	| 2023-1-30 | 
