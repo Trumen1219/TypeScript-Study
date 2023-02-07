@@ -1,57 +1,52 @@
-import Food from "./food";
+import Food from "./Food";
 import Records from "./Records";
-import Snake from "./snake";
+import Snake from "./Snake";
+
 class Move {
     food: Food
     records: Records
     snake: Snake
-    direction: String = ''
+    direction: string = ''
+
     constructor() {
         this.food = new Food()
-        this.records = new Records(10, 1)
+        this.records = new Records()
         this.snake = new Snake()
+        this.food.change()
         this.init()
     }
     init() {
         document.addEventListener('keydown', this.keydownHandler.bind(this))
-        this.food.change()
-    }
-    keydownHandler(Event: KeyboardEvent) {
-        this.direction = Event.key
         this.run()
-        console.log(this.direction);
+    }
+    keydownHandler(event: KeyboardEvent) {
+        this.direction = event.key
+        console.log('this.direction', this.direction);
+        this.run()
     }
     run() {
-        // 获取蛇现在坐标
-        // let X = this.snake.X;
-        // let Y = this.snake.Y;        
-        // 根据按键方向来计算X值和Y值（未更新）
+        console.log('try');
         switch (this.direction) {
-            case 'ArrowUp':
-            case "Up":
-                // 向上移动 top 减少
-                this.snake.Y -= 10;
+            case "ArrowUp":
+                this.snake.Y = 10
+                console.log('this.snake.Y',this.snake.Y);
                 break;
             case "ArrowDown":
-            case "Down":
-                // 向下移动 top 增加
-                this.snake.Y += 10;
-                break;
-            case "ArrowLeft":
-            case "Left":
-                // 向左移动 left 减少
-                this.snake.X -= 10;
+                this.snake.Y += 10
+                console.log('this.snake.Y',this.snake.Y);
                 break;
             case "ArrowRight":
-            case "Right":
-                // 向右移动 left 增加
-                this.snake.X += 10;
+                this.snake.X += 10
+                console.log('this.snake.Y',this.snake.X);
+                break;
+            case "ArrowLeft":
+                this.snake.X -= 10
+                console.log('this.snake.X',this.snake.X);
                 break;
         }
-        
-        // setTimeout(() => {
-        //     this.run.bind(this)
-        // }, 300 - (this.records.level - 1) * 30);
+        setTimeout(() => {
+            this.run.bind(this)
+        }, 300-(this.records.level - 1)* 30);
     }
 }
 export default Move
