@@ -1,5 +1,5 @@
 class Food {
-    element: HTMLElement;
+    private element: HTMLElement;
     constructor() {
         this.element = document.querySelector('.food')!;
     }
@@ -9,10 +9,9 @@ class Food {
     get Y() {
         return this.element.offsetTop;
     }
-    set X(value) {
+    change() {
         (this.element as HTMLElement).style.left = Math.round(Math.random() * 29) * 10 + 'px';
-    }
-    set Y(value) {
         (this.element as HTMLElement).style.top = Math.round(Math.random() * 29) * 10 + 'px';
     }
 }
+export default Food
